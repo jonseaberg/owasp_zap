@@ -97,7 +97,7 @@ module OwaspZap
 
             cmd_line += " -config script.scripts.name='#{params[:script_name]}'" if params[:script_name]
             cmd_line += " -config script.scripts.engine='#{params[:script_engine]}'" if params[:script_engine]
-            cmd_line += " -config script.scripts.type='#{params[:type]}'" if params[:type]
+            cmd_line += " -config script.scripts.type='#{params[:script_type]}'" if params[:script_type]
             cmd_line += " -config script.scripts.enabled='#{params[:script_enabled]}'" if params[:script_enabled]
             cmd_line += " -config script.scripts.file='#{params[:script_file]}'" if params[:script_file]
 
