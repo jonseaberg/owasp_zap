@@ -1,6 +1,8 @@
 module OwaspZap
     class AjaxSpider
 
+        RUNNING = "running".freeze
+
         def initialize(params = {})
             @base = params[:base]
             @target = params[:target]
@@ -40,7 +42,7 @@ module OwaspZap
         end
 
         def running?
-            self.status == "running"
+            self.status == RUNNING
         end
 
         private
