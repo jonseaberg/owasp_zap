@@ -13,6 +13,7 @@ require_relative "owasp_zap/alert"
 require_relative "owasp_zap/auth"
 require_relative "owasp_zap/scanner"
 require_relative "owasp_zap/policy"
+require_relative "owasp_zap/ajax_spider"
 
 module OwaspZap
     class ZapException < Exception;end
@@ -85,6 +86,10 @@ module OwaspZap
 
         def auth
             OwaspZap::Auth.new(base: @base, target: @target, api_key: @api_key)
+        end
+
+        def ajax_spider
+            OwaspZap::AjaxSpider.new(base: @base, target: @target, api_key: @api_key)
         end
 
         # TODO
