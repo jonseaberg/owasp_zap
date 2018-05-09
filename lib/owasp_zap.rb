@@ -105,6 +105,7 @@ module OwaspZap
             cmd_line += " -config script.scripts.type='#{params[:script_type]}'" if params[:script_type]
             cmd_line += " -config script.scripts.enabled='#{params[:script_enabled]}'" if params[:script_enabled]
             cmd_line += " -config script.scripts.file='#{params[:script_file]}'" if params[:script_file]
+            cmd_line += " -config selenium.chromeDriver='#{params[:chromedriver]}'" if params[:chromedriver]
 
             fork do
                # if you passed :output=>"file.txt" to the constructor, then it will send the forked process output
